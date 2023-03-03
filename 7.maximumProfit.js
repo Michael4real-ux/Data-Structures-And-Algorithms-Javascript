@@ -17,6 +17,8 @@ Output: Number
  */
 
 function getMaxProfit(prices) {
+
+   // Solution 1
 //   let maxProfit = [0]
 //   for(let i = 0; i< prices.length; i++){
 //     for(j=i + 1; j<prices.length; j++){
@@ -24,6 +26,8 @@ function getMaxProfit(prices) {
 //     }
 //   }
 //   return Math.max(...maxProfit)
+
+   // Solution 2
  let minPrice = Infinity;
  let maxProfit = 0;
  for(let currentPrice of prices){

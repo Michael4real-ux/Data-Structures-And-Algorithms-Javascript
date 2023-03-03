@@ -13,7 +13,8 @@ Examples
 'abcddbca' -> 'abcd'
 'abababcdcdcd' -> 'abcd'
  */
-
+  // Solution 1
+  
 // function removeDupes(str) {
 //     const hash = {};
 //     const arrStore = [];
@@ -26,6 +27,8 @@ Examples
 //     }
 //     return arrStore.join("")
 // }
+
+ // Solution 2
 
 function removeDupes(str) {
  const uniqueChar = new Set(str);

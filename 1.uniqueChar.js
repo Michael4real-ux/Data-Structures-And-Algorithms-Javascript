@@ -12,6 +12,7 @@ isUnique('abcAdef'); // -> true
 isUnique('abcaef'); // -> false
 
  */
+// Solution 1
 
 // // function isUnique(str){
 // //  str.match(/[a-z]/gi);
@@ -33,6 +34,7 @@ isUnique('abcaef'); // -> false
 // // }
 
 // // Solution 2
+
 // // function isUnique(str){
 // //    for(let char of str){
 // //     if(str.indexOf(char) !== str.lastIndexOf(char)){
@@ -55,6 +57,7 @@ isUnique('abcaef'); // -> false
 // // }
 
 // // Solution 4
+
 // // function isUnique(str){
 // //  let hash = {};
 
@@ -67,6 +70,8 @@ isUnique('abcaef'); // -> false
 // //  }
 // //  return true;
 // // }
+
+// // Solution 5
 
 function isUnique(str){
    return new Set(str).size === str.length;

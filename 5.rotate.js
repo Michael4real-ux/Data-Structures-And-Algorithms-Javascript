@@ -20,6 +20,8 @@ The following sets of strings are rotations:
  */
 
 function stringRotation(str1,str2){
+    // Solution 1
+
 //   if(str1.length !== str2.length){
 //     return false;
 //   }
@@ -31,6 +33,8 @@ function stringRotation(str1,str2){
 //     }
 //   }
 //   return false;
+
+//Solution 2
 
 return str1.length === str2.length && (str1+ str1).includes(str2)
 }
