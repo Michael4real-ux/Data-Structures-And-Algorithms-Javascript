@@ -4,7 +4,8 @@
 linearSearch([-5,2,10,4,6], 10) -> 2;
 linearSearch([-5,2,10,4,6], 6) -> 4;
 linearSearch([-5,2,10,4,6], 20)-> -1;
- - Simple right?LOL Yeah it is based on the once you have solved earlier
+
+ - Simple right? LOL Yeah it is compared to the once you have solved earlier. I am just letting you the kind of algorithm you are about to solve. We will solve this using binary search in the next
  */
 
 function linearSearch(arr, target) {
