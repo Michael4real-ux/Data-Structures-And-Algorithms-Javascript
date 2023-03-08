@@ -8,7 +8,7 @@
      fibonacci(3) = [0,1,1];
      fibonacci(7) = [0,1,1,2,3,5,8]
  */
-// Solution 1
+// Solution 1 - Better solution
 // function fibonacci(n) {
 //   let fib = [0, 1];
 //   for (let i = 2; i < n; i++) {
@@ -17,7 +17,10 @@
 //   return fib;
 // }
 
-//Solution 2 - Recursion
+// Time - 0(n)
+// Space - 0(n)
+
+//Solution 2 - Recursion(Not all recursion are good)
 function fibonacci(n) {
  if(n < 2){
   return n
@@ -25,6 +28,8 @@ function fibonacci(n) {
  return fibonacci(n -1) + fibonacci(n-2); 
   // this will give you the nth element not the first nth elements like the first solution if you want the nth element for the first solution return fib.length-1;
 }
+
+//Time - 0(n^2)
 
 console.log(fibonacci(2));
 console.log(fibonacci(3));

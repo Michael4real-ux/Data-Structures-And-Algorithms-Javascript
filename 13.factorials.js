@@ -9,15 +9,23 @@
  factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
 
  */
+// Solution 1
+//  function factorial(n){
+//     let result = 1;
+//     for(let i = 2; i <= n; i++){
+//       result *= i;
+//     }
+//     return result;
+//  }
 
+ //Solution 2 - recursion
  function factorial(n){
-    let result = 1;
-    for(let i = 2; i <= n; i++){
-      result *= i;
-    }
-    return result;
- }
+  if(n === 0){
+    return 1
+  }
+  return n * factorial(n-1);
+}
 
- console.log(factorial(0))
+console.log(factorial(0))
 console.log(factorial(3))
 console.log(factorial(7))
