@@ -1,6 +1,5 @@
-/**
- Adding Ordinal Indicator Suffixes
-
+/*
+Adding Ordinal Indicator Suffixes
 Task
 Finish the function numberToOrdinal, which should take a number and return it as a string with the correct ordinal indicator suffix (in English). For example, 1 turns into "1st".
 
@@ -28,13 +27,43 @@ Constraints
 
 Examples
 number	Return Value
-1	"1st"
-2	"2nd"
-3	"3rd"
-4	"4th"
-21	"21st"
+1	     "1st"
+2	     "2nd"
+3	     "3rd"
+4	     "4th"
+21	     "21st"
  */
 
+//SOLUTION-BRUTE FORCE - basic approach
 function numberToOrdinal(number) {
-  
-};
+  if (number === 0) {
+    return "0";
+  }
+
+  if ((number >= 10 && number <= 20) || (number >= 110 && number <= 120)) {
+    return `${number}th`;
+  }
+
+  let conversion = String(number).split("");
+  let lastNumber = Number(conversion[conversion.length - 1]);
+
+  if(lastNumber === 1){
+    return `${number}st`
+  } else if(lastNumber === 2){
+    return `${number}nd`
+  } else if(lastNumber === 3){
+    return `${number}rd`
+  } else{
+    return `${number}th`
+  }
+}
+
+console.log(numberToOrdinal(0));
+console.log(numberToOrdinal(1));
+console.log(numberToOrdinal(2));
+console.log(numberToOrdinal(3));
+console.log(numberToOrdinal(4));
+console.log(numberToOrdinal(21));
+console.log(numberToOrdinal(101));
+console.log(numberToOrdinal(111));
+console.log(numberToOrdinal(120));
