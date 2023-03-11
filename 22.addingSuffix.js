@@ -56,6 +56,7 @@ function numberToOrdinal(number) {
   } else{
     return `${number}th`
   }
+  
 }
 
 console.log(numberToOrdinal(0));
