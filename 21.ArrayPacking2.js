@@ -30,7 +30,7 @@ We have [1, 2, 3, 4, 5, 6, 7, 8] -> [3, 7, 11, 15] -> [21, 165] -> [186], so the
 */
 
 /*  Solution 1 : Brute force Approach. 
-  This solution will only work for the first test case the second is suppose to give 64, but in for this solution 1 it will give you 16. The solution will work on (Qualified also own by codewars) but will fail on code wars, try it on codewars.
+  This solution will only work for the first test case the second is suppose to give 64, but for solution 1 it will give you 16. The solution will work on (Qualified also own by codewars) but will fail on code wars, try it on codewars.
   https://www.codewars.com/kata/588854201361435f5e0000bd/train/javascript
 */
 
@@ -57,7 +57,6 @@ We have [1, 2, 3, 4, 5, 6, 7, 8] -> [3, 7, 11, 15] -> [21, 165] -> [186], so the
 
 //helper function for sum
 function sum(integers){
- let sum = 0;
  let newArr = [];
  for(let i = 1; i < integers.length; i+=2){
   newArr.push(integers[i] + integers[i-1])
@@ -65,11 +64,10 @@ function sum(integers){
  return newArr;
 }
 
-//console.log(product([1, 2, 3, 4, 5, 6, 7, 8]));
+//console.log(sum([1, 2, 3, 4, 5, 6, 7, 8]));
 
 //helper function for product
 function product(integers){
-    let product = 1;
     let newArr = []
     for(let i =1; i < integers.length; i+=2){
        newArr.push(integers[i] * integers[i-1])
