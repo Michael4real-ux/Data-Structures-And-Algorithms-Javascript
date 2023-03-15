@@ -20,15 +20,22 @@ true // Place all students with blue shirts in the back row.
  */
 
 function classPhotos(blueShirtHeights, redShirtHeights) {
+    if(blueShirtHeights.length !== redShirtHeights.length){
+       return false;
+    }
+
+    let blueSorted = blueShirtHeights.sort();
+    let redSorted =  redShirtHeights.sort();
+
   let firstInstance = false;
   let secondInstance = false;
 
   for (
     let i = 0, j = 0;
-    i < blueShirtHeights.length || j < redShirtHeights.length;
+    i < blueSorted.length || j < redSorted.length;
     i++, j++
   ) {
-    if (blueShirtHeights[i] < redShirtHeights[j]) {
+    if (blueSorted[i] < redSorted[j]) {
       firstInstance = true;
     } else {
       firstInstance = false;
@@ -38,10 +45,10 @@ function classPhotos(blueShirtHeights, redShirtHeights) {
 
   for (
     let i = 0, j = 0;
-    i < blueShirtHeights.length || j < redShirtHeights.length;
+    i < blueSorted.length || j < redSorted.length;
     i++, j++
   ) {
-    if (blueShirtHeights[i] > redShirtHeights[j]) {
+    if (blueSorted[i] > redSorted[j]) {
       secondInstance = true;
     } else {
       secondInstance = false;
